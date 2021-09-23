@@ -7,7 +7,7 @@
                 <Image name="iconUnity" />
             </Button>
             <Button name="signInWithEmail" text="Sign in with Email">
-
+                <!-- TODO: Find correct mail icon -->
                 <Image name="iconEmail" />
             </Button>
         </VisualElement>

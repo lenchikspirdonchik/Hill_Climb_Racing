@@ -4827,7 +4827,7 @@ Mostrar ficheros y directorios eliminados
 Muestra los ficheros borrados manualmente en el workspace fuera del control de Plastic. (Sin usar una GUI o un comando, sino simplemente borrándolos del disco).
 
 == PendingChangesMoveDetectionExplanation ==
-Se puede mover un fichero usando Plastic con "cm mv" o desde las GUIs o el plugin de un IDE. Este métdo no requiere "detección". Pero, si se mueven los ficheros directamente en disco, Plastic puede detectar la operación. También se aplica a directorios.
+Se puede mover un fichero usando Plastic con "cm mv" o desde las GUIs o el plugin de un IDE. Este método no requiere "detección". Pero, si se mueven los ficheros directamente en disco, Plastic puede detectar la operación. También se aplica a directorios.
 
 == PendingChangesFindMovedFiles ==
 Buscar ficheros y directorios movidos y renombrados
@@ -5019,10 +5019,10 @@ Ignorar fines de línea
 Ignorar espacios y tabuladores
 
 == EOLWhitespacesMethod ==
-Ignorar odo
+Ignorar todo
 
 == NoneMethod ==
-Reconocer odo
+Reconocer todo
 
 == DiffVariables ==
 Las siguientes variables están disponibles para utilizar como parámetros al invocar la herramienta externa de diferencias:
@@ -5037,7 +5037,7 @@ Las siguientes variables están disponibles para utilizar como parámetros al in
     @destinationhash: cadena MD5 calculada a partir del fichero destino
 
     @filetype: tipo MIME usado para el realzado de sintaxis
-    @comparationmethod: méodo de comparación utilizado
+    @comparationmethod: método de comparación utilizado
     @fileencoding: codificación de fichero utilizada por defecto si no se detecta la del fichero
 
 Ejemplos:
@@ -5161,7 +5161,7 @@ Las siguientes variables están disponibles para utilizar como parámetros al in
     @basehash: cadena MD5 calculada a partir del fichero antecesor común
 
     @filetype: tipo MIME usado para el realzado de sintaxis
-    @comparationmethod: méodo de comparación utilizado
+    @comparationmethod: método de comparación utilizado
     @fileencoding: codificación de fichero utilizada por defecto si no se detecta la del fichero
     @resultencoding: codificación para el fichero resultado (NONE para que se calcule en funcion de los contribuidores)
     @mergetype: tipo de merge utilizado
@@ -5300,7 +5300,7 @@ Recargar
 Abrir GUI
 
 == AllCheckButton ==
-odo
+Todo
 
 == SearchTooltip ==
 Buscar
@@ -6255,10 +6255,10 @@ Añadir...
 Eliminar
 
 == AllowAll ==
-Permitir odo
+Permitir todo
 
 == Deny All ==
-Denegar odo
+Denegar todo
 
 == RepositoryServerPermissions ==
 Permisos del Servidor de Repositorios
