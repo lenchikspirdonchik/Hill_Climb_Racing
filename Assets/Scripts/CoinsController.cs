@@ -6,6 +6,7 @@ using UnityEngine;
 public class CoinsController : MonoBehaviour
 {
     public UserController userController;
+    public AudioSource audio;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -28,6 +29,7 @@ public class CoinsController : MonoBehaviour
         }
 
         userController.coins += sum;
+        audio.Play();
         Destroy(gameObject);
     }
 }
