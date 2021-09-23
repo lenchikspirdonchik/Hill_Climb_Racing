@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class FuelController : MonoBehaviour
 {
-   public CarController carController;
+   public UserController userController;
 
    private void OnTriggerEnter2D(Collider2D other)
    {
-       carController.fuel = 1f;
+       userController.fuel = 1f;
        Destroy(gameObject);
    }
 }

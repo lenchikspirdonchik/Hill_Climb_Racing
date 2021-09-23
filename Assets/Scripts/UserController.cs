@@ -4,21 +4,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CarController : MonoBehaviour
+public class UserController : MonoBehaviour
 {
-    public Rigidbody2D carController;
+    [Header("Movement settings")] public Rigidbody2D carController;
     public WheelJoint2D backTire, frontTire;
     public float speed = 100000f, carTorque = 10f;
-    public float fuel = 1;
+
+    [Header("Fuel settings")] public float fuel = 1;
     public float fuelСonsumption = 0.000005f;
+
+    [Header("Coins settings")] public float coins = 0;
+
+    [Header("Canvas settings")] [Tooltip("canvas images")]
+    public Image fuelImage, gas, brake, gasPress, breakPress;
+
+    [Tooltip("Canvas texts")] public Text coinCounter;
     private float _movement = 0f;
-    public Image fuelImage;
+
+    private void Start()
+    {
+        brake.enabled = true;
+        breakPress.enabled = false;
+        gas.enabled = true;
+        gasPress.enabled = false;
+    }
 
     void Update()
     {
         // _movement = Input.GetAxis("Horizontal");
         carTorque = _movement * -10f;
         fuelImage.fillAmount = fuel;
+        coinCounter.text = coins.ToString();
     }
 
     private void FixedUpdate()
@@ -46,16 +62,24 @@ public class CarController : MonoBehaviour
         if (pedal == "Brake")
         {
             _movement = -1;
+            brake.enabled = false;
+            breakPress.enabled = true;
         }
         else
         {
             if (pedal == "Gas")
             {
                 _movement = 1;
+                gas.enabled = false;
+                gasPress.enabled = true;
             }
             else
             {
                 _movement = 0;
+                brake.enabled = true;
+                breakPress.enabled = false;
+                gas.enabled = true;
+                gasPress.enabled = false;
             }
         }
     }
