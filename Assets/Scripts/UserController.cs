@@ -8,10 +8,10 @@ public class UserController : MonoBehaviour
 {
     [Header("Movement settings")] public Rigidbody2D carController;
     public WheelJoint2D backTire, frontTire;
-    public float speed = 100000f, carTorque = 10f;
+    public float speed, carTorque = 10f;
 
     [Header("Fuel settings")] public float fuel = 1;
-    public float fuelСonsumption = 0.000005f;
+    public float fuelСonsumption;
 
     [Header("Coins settings")] public float coins = 0;
 
@@ -35,7 +35,7 @@ public class UserController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        carTorque = _movement * -10f;
+        carTorque = _movement * -15f;
         fuelImage.fillAmount = fuel;
         coinCounter.text = coins.ToString();
         fuel -= fuelСonsumption;
@@ -49,7 +49,7 @@ public class UserController : MonoBehaviour
             backTire.useMotor = true;
             frontTire.useMotor = true;
             var motor = new JointMotor2D
-                { motorSpeed = _movement * speed * Time.deltaTime, maxMotorTorque = 10000 };
+                { motorSpeed = _movement * speed * 10000 * Time.deltaTime, maxMotorTorque = 10000 };
             backTire.motor = motor;
             frontTire.motor = motor;
             carController.AddTorque(_movement * carTorque * Time.fixedDeltaTime);
